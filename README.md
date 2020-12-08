@@ -28,7 +28,7 @@
 | day_id        | integer   | null: false       | 
 | price         | integer   | null: false       | 
 
-- belongs_to :users
+- belongs_to :user
 - has_one :buy
 
 ## buysテーブル
@@ -39,17 +39,19 @@
 | item       | reference | foreign_key: true |
 
 - belongs_to :item
+- belongs_to :user
 - has_one :residence
 
 ## residencesテーブル
 
-| Column           | Type    | Options           |  
-| ---------------- | ------- | ----------------- |
-| post_number      | string  | null: false       |
-| city             | string  | null: false       |
-| address          | string  | null: false       |
-| build_name       | string  |                   |
-| telephone_number | string  | null: false       |
-| area_id          | integer | foreign_key: true |
+| Column           | Type      | Options           |  
+| ---------------- | --------- | ----------------- |
+| post_number      | string    | null: false       |
+| city             | string    | null: false       |
+| address          | string    | null: false       |
+| build_name       | string    |                   |
+| telephone_number | string    | null: false       |
+| area_id          | integer   |                   |
+| item             | integer   | foreign_key: true |
 
 - belongs_to :buy
