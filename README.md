@@ -1,16 +1,15 @@
 ## usersテーブル
 
-| Column          | Type   | Options     |
-| --------------- | ------ | ----------- |
-| name            | string | null: false |
-| email           | string | null: false |
-| password        | string | null: false |
-| last_name       | string | null: false |
-| first_name      | string | null: false |
-| kana_last_name  | string | null: false |
-| kana_first_name | string | null: false |
-| birthday        | date   | null: false |
-
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| name               | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
+| last_name          | string | null: false |
+| first_name         | string | null: false |
+| kana_last_name     | string | null: false |
+| kana_first_name    | string | null: false |
+| birthday           | date   | null: false |
 
 - has_many :items
 - has_many :buys
@@ -40,7 +39,7 @@
 | item       | reference | foreign_key: true |
 
 - belongs_to :item
-- belongs_to :residence
+- has_one :residence
 
 ## residencesテーブル
 
@@ -53,4 +52,4 @@
 | telephone_number | string  | null: false |
 | prefecture_id    | integer | null: false |
 
-has_one :buy
+- belongs_to :buy
