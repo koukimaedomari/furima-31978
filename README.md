@@ -51,7 +51,7 @@
 | address          | string     | null: false       |
 | build_name       | string     |                   |
 | telephone_number | string     | null: false       |
-| area_id          | integer    |                   |
+| area_id          | integer    | null: false       |
 | buy              | reference  | foreign_key: true |
 
 - belongs_to :buy
