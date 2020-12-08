@@ -43,13 +43,13 @@
 
 ## residencesテーブル
 
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| post_number      | string  | null: false |
-| city             | string  | null: false |
-| address          | string  | null: false |
-| build_name       | string  |             |
-| telephone_number | string  | null: false |
-| prefecture_id    | integer | null: false |
+| Column           | Type    | Options           |  
+| ---------------- | ------- | ----------------- |
+| post_number      | string  | null: false       |
+| city             | string  | null: false       |
+| address          | string  | null: false       |
+| build_name       | string  |                   |
+| telephone_number | string  | null: false       |
+| area_id          | integer | foreign_key: true |
 
 - belongs_to :buy
