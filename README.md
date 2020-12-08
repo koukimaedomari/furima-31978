@@ -52,6 +52,6 @@
 | build_name       | string     |                   |
 | telephone_number | string     | null: false       |
 | area_id          | integer    |                   |
-| user_id          | reference  | foreign_key: true |
+| buy              | reference  | foreign_key: true |
 
 - belongs_to :buy
